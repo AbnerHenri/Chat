@@ -1,0 +1,45 @@
+body{
+    background: #000428;  
+    background: -webkit-linear-gradient(to right, #004e92, #000428);  
+    background: linear-gradient(to right, #004e92, #000428); 
+}
+
+.chat{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    width:40vw;
+    height:95vh;
+    margin:15px;
+    float:right;
+}
+
+.messages{
+    width:40vw;
+    height:90vh;
+    border: none;
+    border-top-left-radius: 18px;
+    border-bottom-right-radius: 18px;
+    background-color: white;
+
+    box-shadow: 2px 2px 5px ;
+}
+
+.submitMessage{
+    width:200px;
+    height:30px;
+    margin-top:10px;
+}
+
+.submitButton{
+    width:70px;
+    height:36px;
+}
+
+/* --------------------------------------------------- */
+
+.submitMessage::placeholder{
+    text-align: center;
+}
