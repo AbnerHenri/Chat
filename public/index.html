@@ -13,14 +13,13 @@
     <div class="chat">
         <div class='messages'></div>
 
-        <form>
-            <input class='submitMessage' type="text" placeholder="Envie uma mensagem">
+        <form name="message_form" id="message_form">
+            <input name="msg" id="message" class='submitMessage' type="text" placeholder="Envie uma mensagem">
             <input class='submitButton' type="submit" placeholder="Enviar">
         </form>
     </div>
 
-    <script>
-
-    </script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="./chat.js"></script>
 </body>
 </html>
