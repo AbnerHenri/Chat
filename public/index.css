@@ -31,6 +31,22 @@ body{
     margin:10px;
 }
 
+.rooms{
+    display: flex;
+    flex-direction: column;
+
+    width:40vw;
+    height:vh;
+}
+
+a{
+    margin:10px;
+    padding:10px;
+    text-decoration: none;
+    color:white;
+    border: 1px solid white;
+}
+
 input{
     width:200px;
     height:30px;
