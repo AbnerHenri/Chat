@@ -1,5 +1,6 @@
 const room = window.location.pathname.replace(/\//g, '')
 const socket = io(`http://localhost:3000/${room}`)
+console.log(room)
 
 let user = null
 
@@ -15,14 +16,18 @@ function updateMessagesOnScreen(messages){
 
     messages.forEach(message => {
         list_message += `<div class='msg'><strong>${message.user}</strong> : ${message.msg}</div>`
+        title += message.room
     });
+
 
     div_messages.innerHTML = list_message
 }
 
 document.addEventListener('DOMContentLoaded', ()=>{
     const form = document.getElementById('message_form')
-    console.log(form)
+    const div_title = document.querySelector('.title')
+
+    div_title.innerHTML = room
 
     form.addEventListener('submit', (e)=>{
         e.preventDefault();
