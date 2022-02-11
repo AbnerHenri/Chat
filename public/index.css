@@ -1,68 +1,60 @@
-body{
-    background: #000428;  
-    background: -webkit-linear-gradient(to right, #004e92, #000428);  
-    background: linear-gradient(to right, #004e92, #000428); 
-}
-
 .chat{
-    display:flex;
+    display: flex;
+    margin-left: 100px;
     flex-direction: column;
-    justify-content: space-between;
     align-items: center;
-
-    width:40vw;
-    height:95vh;
-    margin:15px;
-    float:right;
-}
-
-.messages{
-    width:40vw;
-    height:90vh;
-    border: none;
-    border-top-left-radius: 18px;
-    border-bottom-right-radius: 18px;
-    background-color: white;
-
-    box-shadow: 2px 2px 5px ;
-}
-
-.msg{
-    margin:10px;
 }
 
 .rooms{
-    display: flex;
-    flex-direction: column;
-
-    width:40vw;
-    height:vh;
+    position:absolute;
+    top:50px;
 }
 
-a{
+.messages{
+    width:35vw;
+    height:80vh;
     margin:10px;
     padding:10px;
-    text-decoration: none;
-    color:white;
-    border: 1px solid white;
+    border:1px solid black;
 }
+
+.title:first-child{
+    font-variant: small-caps;
+}
+
+/* ---------------------------------------------- */
+
+#user_form{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+
+    width: 35vw;
+    height:80vh;
+    margin:10px;
+    padding:10px;
+    background-color: rgb(0, 0, 0, 0.5);
+}
+
+/* ---------------------------------------------- */
 
 input{
     width:200px;
     height:30px;
-    margin:10px;
 }
 
 input::placeholder{
     text-align: center;
-
 }
-
-/* --------------------------------------------------- */
 
 button{
     width:70px;
     height:36px;
+    color:white;
+    border: none;
+    cursor:pointer;
+    margin:5px;
+    background-color: rgb(68, 0, 255);
 }
-
-
