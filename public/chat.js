@@ -1,7 +1,8 @@
 const room = window.location.pathname.replace(/\//g, '')
 const socket = io(`http://localhost:3000/${room}`)
 
-let user = null
+let user = localStorage.getItem('user')
+console.log(user)
 
 socket.on('update_message', (messages)=>{
     console.log(messages)
@@ -30,7 +31,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
     form.addEventListener('submit', (e)=>{
         e.preventDefault();
 
-        if(!user){
+        if(user === null){
             alert('Defina um Usuário')
             return
         }
@@ -43,10 +44,19 @@ document.addEventListener('DOMContentLoaded', ()=>{
     })
 
     const userForm = document.querySelector('#user_form')
-    userForm.addEventListener('submit', (e)=>{
-        e.preventDefault();
 
-        user = document.forms['user_form']['user'].value
+    if(user === null){
+
+        userForm.addEventListener('submit', (e)=>{
+            e.preventDefault();
+    
+            user = document.forms['user_form']['user'].value
+            localStorage.setItem('user', user)
+            userForm.parentNode.removeChild(userForm)
+        })
+    }else{
         userForm.parentNode.removeChild(userForm)
-    })
+    }
+        
+
 })
