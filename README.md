@@ -1,4 +1,6 @@
 <h1>Chat</h1>
+<p>Possui salas com conexões individuais</p>
+<p>O nome de usuário é gravado no localStorage</p>
 
 <img src='./assets/Animação.gif'></img>
   <br>
