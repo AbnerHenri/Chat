@@ -18,7 +18,7 @@ function updateMessagesOnScreen(messages){
     let list_message = ''
 
     messages.forEach(message => {
-        list_message += `<div class='msg'><strong>${message.user}</strong> : ${message.msg}</div>`
+        list_message += `<div><strong>${message.user}</strong> : ${message.msg}</div>`
     });
 
 
