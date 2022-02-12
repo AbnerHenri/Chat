@@ -2,12 +2,15 @@ const room = window.location.pathname.replace(/\//g, '')
 const socket = io(`http://localhost:3000/${room}`)
 
 let user = localStorage.getItem('user')
-console.log(user)
+let div_messages = document.querySelector('.messages') 
+
 
 socket.on('update_message', (messages)=>{
-    console.log(messages)
-    updateMessagesOnScreen(messages)
+        updateMessagesOnScreen(messages)
 })
+
+
+// ------------------------------------------------------------- //
 
 function updateMessagesOnScreen(messages){
     const div_messages = document.querySelector('.messages') 
